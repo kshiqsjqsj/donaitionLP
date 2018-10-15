@@ -336,12 +336,18 @@ body {
 				width: 30px;
 				border-radius: 50%;
 				opacity: 0.8;
+				@include pc {
+					display: none;
+				}
 			}
 			
 			& img{
 				display: block;
 				position: absolute;
 				width: 80px;
+				 @include pc {
+					display: none;
+				}
 			}
 			
 			//レフト

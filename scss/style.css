@@ -249,10 +249,16 @@ section {
     width: 30px;
     border-radius: 50%;
     opacity: 0.8; }
+    @media (max-width: 1024px) {
+      .ad-description .ball {
+        display: none; } }
   .ad-description img {
     display: block;
     position: absolute;
     width: 80px; }
+    @media (max-width: 1024px) {
+      .ad-description img {
+        display: none; } }
   .ad-description #sample1 {
     top: 245px;
     left: 187px;
