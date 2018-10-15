@@ -46,12 +46,12 @@ a img {
 h2 {
   text-align: center;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 500;
   font-size: calc(1.5rem + ((1vw - 7.68px) * 1.0929)); }
 
 h3, h4 {
   font-size: 26px;
-  font-weight: 300; }
+  font-weight: 400; }
   @media (max-width: 768px) {
     h3, h4 {
       font-size: 22px; } }
@@ -218,9 +218,9 @@ section {
         .ad-description .text h2 {
           margin-bottom: 15px; } }
     .ad-description .text p {
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 16px;
-      margin-bottom: 40px; }
+      margin-bottom: 20px; }
       @media (max-width: 480px) {
         .ad-description .text p {
           margin-bottom: 15px;
@@ -249,36 +249,68 @@ section {
     width: 30px;
     border-radius: 50%;
     opacity: 0.8; }
+    @media (max-width: 1024px) {
+      .ad-description .ball {
+        display: none; } }
   .ad-description img {
     display: block;
     position: absolute;
     width: 80px; }
+    @media (max-width: 1024px) {
+      .ad-description img {
+        display: none; } }
   .ad-description #sample1 {
-    top: 50px;
-    left: 50px; }
+    top: 245px;
+    left: 187px;
+    width: 160px; }
   .ad-description #sample2 {
-    top: 140px;
-    left: 70px;
-    width: 100px; }
+    top: 17px;
+    left: 55px;
+    width: 220px; }
   .ad-description #pink-ball {
-    top: 30px;
+    top: 270px;
     left: 125px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-color: pink; }
   .ad-description #green-ball {
-    top: 140px;
-    left: 35px;
-    width: 12px;
-    height: 12px;
-    background-color: green;
+    top: 20px;
+    left: 295px;
+    width: 60px;
+    height: 60px;
+    background-color: #6AFF45;
     opacity: 0.6; }
   .ad-description #pink-ball2 {
-    bottom: 150px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
+    bottom: -5px;
+    left: 80px;
+    width: 110px;
+    height: 110px;
     background-color: pink; }
+  .ad-description #sample3 {
+    right: 10px;
+    top: 40px;
+    width: 200px; }
+  .ad-description #sample4 {
+    right: 160px;
+    bottom: -10px;
+    width: 180px; }
+  .ad-description #yellow-ball {
+    right: 260px;
+    top: 170px;
+    width: 50px;
+    height: 50px; }
+  .ad-description #pink-ball3 {
+    right: 20px;
+    top: 290px;
+    width: 90px;
+    height: 90px;
+    background-color: #FF8694; }
+  .ad-description #green-ball2 {
+    right: 80px;
+    top: 268px;
+    width: 80px;
+    height: 80px;
+    background-color: #B6FF45; }
 
 .title-wrapper {
   display: table;
@@ -479,7 +511,7 @@ footer {
   right: 40px;
   z-index: 9999;
   display: none;
-  background-color: #54FF99;
+  background-color: #FF0000;
   border-radius: 50%;
   width: 120px;
   height: 120px;
