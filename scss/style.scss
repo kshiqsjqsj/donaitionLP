@@ -191,75 +191,11 @@ body {
 				}
 			}
 }
-//一旦封印
-	/*	.main-image {
-		  width: 100%;
-			height: 100vh;
-			height: 700px;
-		  background: url(../images/main_image.jpg) no-repeat center top;
-		 background-size:cover;
-		position: relative;
-				@include pc {
-				height: 550px;
-			}
-			
-			@include tab {
-				height: 60vh;
-			};
-			
-			@include sp {
-				height: 220px;
-			};
-		 
-		  .cachcopy {
-			position: absolute;
-			  top: 20%;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			  height: auto;
-			  width: 550px;
-			  @include pc {
-				  width: 450px;
-			  }
-			  @include tab {
-				  width: 60%;
-			  }
-			  
-			  @include sp {
-				  width: 60%;
-			  }
-			  img {
-				  width: 100%;
-				  height: auto;
-			  }
-		  }
-		  .main-button {
-			position: absolute;
-			  bottom: 8%;
-			  left: 5%;
-			width: 35%;
-			  @include tab {
-				  width: 45%;
-			  }
-			  
-			  @include sp {
-				  width: 40%;
-				  bottom: 3%;
-				  left: 4%;
-			  }
-				img {
-				  width: 100%;
-				  height: auto;
-				}
-		   }
-	    }*/
 
 //セッションきょうつう
 		section {
 			@extend %box-center;
-			margin-top: 40px;
+			padding-top: 80px;
 			width: 70%;
 			@include pc {
 				width: 85%;
@@ -269,6 +205,8 @@ body {
 					margin:  30px auto;
 				};
 			}
+
+
 
 //アスデッサン説明
 		.ad-description{
@@ -289,7 +227,8 @@ body {
 				h2 {
 					color: #ff6600;
 					margin-bottom: 40px;
-					line-height: 1.4;
+					line-height: 1.6;
+					font-size: calc(1.5rem + ((1vw - 7.68px) * 1.9126));
 					@include sp {
 						margin-bottom: 15px;
 					}
@@ -331,95 +270,88 @@ body {
 	//アスデッサン説明ページカラーボール,写真設定		
 			.ball {
 				position: absolute;
-				background-color: aqua;
-				height: 30px;
-				width: 30px;
+				width: 20%;
+				height: auto;
 				border-radius: 50%;
 				opacity: 0.8;
-				@include pc {
-					display: none;
-				}
 			}
 			
 			& img{
 				display: block;
 				position: absolute;
 				width: 80px;
-				 @include pc {
-					display: none;
-				}
+				height: auto;
+				
 			}
 			
 			//レフト
 			#sample1{
-				top: 245px;
-				left: 187px;
-				width: 160px;
+				top: 8%;
+				left: 3%;
+				width: 11%;
+				
 			}
 			
 			#sample2{
-				top: 17px;
-				left: 55px;
-				width: 220px;
+				top: 47%;
+				left: 6%;
+				width: 14%;
+				
 			}
 			
 			#pink-ball {
-				top: 270px;
-				left: 125px;
-				width: 30px;
-				height: 30px;
-				background-color: pink;
+				top: 35%;;
+				left: 13%;
+				width: 3%;
+				opacity: .3;
 			}
 			
 			#green-ball {
-				top: 20px;
-				left: 295px;
-				width: 60px;
-				height: 60px;
-				background-color: #6AFF45;
+				top: 2%;
+				left: 15%;
+				width: 5%;
 				opacity: 0.6;
 			}
 			
 			#pink-ball2 {
-				bottom: -5px;
-				left: 80px;
-				width: 110px;
-				height: 110px;
-				background-color: pink;
+				bottom: 10%;
+				left: 4%;
+				width: 7%;
+				opacity: .6;
 			} 
 			
 			//ライト
 			
 			#sample3 {
-				right: 10px;
-				top: 40px;
-				width: 200px;
+				right: 3%;
+				top: 10%;
+				width: 12%;
 			}
 			
 			#sample4 {
-				right: 160px;
-				bottom: -10px;
-				width: 180px;
+				right: 10%;
+				bottom: 5%;
+				width: 13%;
 			}
 			
 			#yellow-ball {
-				right: 260px;
-				top: 170px;
+				right: 17%;
+				top: 16%;;
 				width: 50px;
 				height: 50px;
+				background-color: #FFFC59;
 			}
 			
 			#pink-ball3 {
-				right: 20px;
-				top: 290px;
+				right: 3%;
+				top: 50%;
 				width: 90px;
-				height: 90px;
-				background-color: #FF8694;
+				opacity: .5;
 			}
 			
 			#green-ball2 {
-				right: 80px;
-				top: 268px;
+				right: 6%;
+				top: 46%;
 				width: 80px;
 				height: 80px;
 				background-color: #B6FF45;
@@ -616,24 +548,37 @@ body {
              }
 
 //寄付方法説明
+
+
 .donaition-method{
-			width: 70%;
-			border: solid 3px red;
-			margin-bottom: 40px;
-				@include tab{
-					  width: 90%;
-				  }
+			width: 100%;
+			margin: 0;
+			padding-bottom: 80px;
+			background-color: #FFEBC7;
 			.donaition-text{
+				width: 50%;
+				@extend %box-center;
 				text-align: center;
-				padding: 20px 20%;
+				border: solid 1px #FF662E;
+				padding: 40px 60px;
+				background-color: white;
 				@include tab {
 					padding: 20px 7%;
+					width: 90%;
+				}
+				@include sp {
+					padding: 20px 0 ;
 				}
 				h3{
-					margin-bottom: 20px;
+					margin-bottom: 30px;
+					color: #FF662E;
+					font-size: 34px;
+					font-weight: 500;
 				}
 
-				dl{
+				dl{ 
+					width: 70%;
+					@extend %box-center;
 					text-align: left;
 					font-size: 14px;
 					margin-bottom: 10px;
@@ -677,6 +622,13 @@ body {
 				}
 			}
 		}
+
+.donaition-pattern{
+	font-weight: 400;
+	color: #FF662E;
+	padding-right: 1em;
+}
+
 #form-enter,#contact-enter{
 	display: block;
 	width: 200px;
