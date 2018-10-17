@@ -153,6 +153,7 @@ body {
 		img{
 			width: 100%;
 			object-fit: cover;
+			vertical-align: bottom;
 		}
 	}
 	
@@ -212,8 +213,8 @@ body {
 //アスデッサン説明
 		.ad-description{
 			width: 100%;
-			margin-top: 40px;
 			position: relative;
+			background-color: #FFF8EF;
 			@include sp{
 				margin: 0;
 			}
@@ -295,14 +296,14 @@ body {
 			
 			//レフト
 			#sample1{
-				top: 8%;
-				left: 3%;
+				top: 13%;
+				left: 1%;
 				width: 11%;
 				
 			}
 			
 			#sample2{
-				top: 47%;
+				top: 52%;
 				left: 6%;
 				width: 14%;
 				
@@ -321,7 +322,7 @@ body {
 			}
 			
 			#green-ball {
-				top: 2%;
+				top: 9%;
 				left: 15%;
 				width: 5%;
 				opacity: 0.6;
@@ -334,9 +335,9 @@ body {
 			
 			#pink-ball2 {
 				bottom: 10%;
-				left: 4%;
-				width: 7%;
-				opacity: .6;
+				left: 3%;
+				width: 6%;
+				opacity: .5;
 				@include pc {
 					bottom: 23%;
 					left: 7%;
@@ -365,7 +366,7 @@ body {
 				background-color: #FFFC59;
 				@include pc {
 					top: 20%;
-					right: 11%;
+					right: 5%;
 					width: 6%;
 				}
 			}
@@ -376,8 +377,8 @@ body {
 				width: 2%;
 				opacity: .4;
 				@include pc {
-					top: 69%;
-					right: 10%;
+					top: 71%;
+					right: 5%;
 					width: 5%;
 				}
 			}
@@ -399,7 +400,7 @@ body {
 				background-color: #B6FF45;
 				@include pc {
 					top: 43%;
-					right: 5%;
+					right: 2%;
 					width: 9%;
 				}
 			}
@@ -423,26 +424,33 @@ body {
 					  .square {
 						display: table-cell;
 						border-radius: 50%;
-						background-color: #ffcc00;
-						width: 44px;
-						height: 44px;
+						background-color: #FF7B15;
+						width: 50px;
+						height: 50px;
 						color: white;
-						font-size: 28px;
+						font-size: 32px;
+						font-weight: 500;  
 						text-align: center;
 						vertical-align: middle;
 						  @include tab {
-							font-size: 20px;
-							  width: 38px;
-							  height: 38px;
+							font-size: 28px;
+							  width: 44px;
+							  height: 44px;
 						}
 					  }
 					  .contents-h3 {
 						display: table-cell;
-						line-height: 1;
-						vertical-align: middle;
-						padding-left: 5px;
-						padding-top: 3px;	
+						width: 110px;
+						padding-left: 15px;
+						  padding-top: 3px;
+						  img{
+							  @extend %img-responsiv;
+							  vertical-align: middle;
+						  }
 					}
+						.talk-logo {
+							width: 160px;
+						}
 				  }
 .sp{
 	display: none;
@@ -467,11 +475,12 @@ body {
 			-webkit-box-pack: justify;
 			-ms-flex-pack: justify;
 			justify-content: space-between;
-		    margin: 0 0 30px;
+		    margin: 0;
 }
 
+
 .wrap{
-	margin-top: 50px;
+	padding-top: 50px;
 	@include sp{
 		margin-bottom: 25px;
 	}
@@ -494,6 +503,7 @@ body {
 .description p {
 	font-size: 14px;
 	line-height: 1.7;
+	padding: 0 3%;
 	@include sp {
 	  width: 96%;
 		margin: 0 auto;
@@ -602,14 +612,15 @@ body {
 			margin: 0;
 			padding-top: 80px;
 			padding-bottom: 80px;
-			background-color: #FFEBC7;
+			background-color: #fff7ca;
 			.donaition-text{
 				width: 50%;
 				@extend %box-center;
 				text-align: center;
-				border: solid 1px #FF662E;
+				border: solid 1px #fc6;
+				border-radius: 8px;
 				padding: 40px 60px;
-				background-color: white;
+				background-color: #fffce3;
 				@include tab {
 					padding: 20px 7%;
 					width: 80%;
@@ -623,6 +634,7 @@ body {
 					color: #FF662E;
 					font-size: calc(1.625rem + ((1vw - 4.8px) * 0.7843));
 					font-weight: 500;
+					border-bottom: 2px solid #FF662E;
 				}
 
 				dl{ 
