@@ -22,17 +22,21 @@ $sp: 480px;  // スマホ
   }
 }
 
-@media (min-width: 481px){
-	.sp{
+@media (min-width: 769px){
+	.tab{
 		display: none;
 	}
 }
 
-@media (max-width: 480px){
-	.pc{
+@media (max-width: 768px){
+	.pc {
 		display: none;
 	}
+	.tab{
+		display: block;
+	}
 }
+
 //中央寄せ
 %box-center{
 	margin: 0 auto;
@@ -152,8 +156,12 @@ body {
 	.image{
 		img{
 			width: 100%;
+			height: 96vh;
 			object-fit: cover;
-			vertical-align: bottom;
+			vertical-align: top;
+			@include pc{
+				height: auto;
+			}
 		}
 	}
 	
@@ -167,8 +175,8 @@ body {
 			  height: auto;
 			  width: 40%;
 			
-				@include sp{
-					width: 60%;
+				@include tab{
+					width: 57%;
 				} 
 			 
 			  img {
@@ -203,9 +211,7 @@ body {
 			}
 				@include tab {
 					width: 90%;
-					margin:  30px auto;
-					padding: 0; 
-				};
+				}
 			}
 
 
@@ -401,7 +407,7 @@ body {
 				@include pc {
 					top: 43%;
 					right: 2%;
-					width: 9%;
+					width: 10%;
 				}
 			}
 			
@@ -415,14 +421,15 @@ body {
 //ロルモ、未来トークタイトル
 
 .title-wrapper {
-					display: table;
-					table-layout: fixed;
-					padding-bottom: 15px;
-						@include sp{
-							padding: 0;
-						}
+					/*display: table;*/
+					/*table-layout: fixed;*/
+					display: block;
+					border-bottom: 1px solid #FF9D00;
+					padding-bottom: 10px;
+					margin-bottom: 12px;
 					  .square {
 						display: table-cell;
+						display: none;
 						border-radius: 50%;
 						background-color: #FF7B15;
 						width: 50px;
@@ -439,7 +446,7 @@ body {
 						}
 					  }
 					  .contents-h3 {
-						display: table-cell;
+						/*display: table-cell;*/
 						width: 110px;
 						padding-left: 15px;
 						  padding-top: 3px;
@@ -455,7 +462,7 @@ body {
 .sp{
 	display: none;
 	@include sp {
-		display: table;
+		display: block;
 	}
 }
 
@@ -480,14 +487,14 @@ body {
 
 
 .wrap{
-	padding-top: 50px;
-	@include sp{
-		margin-bottom: 25px;
-	}
+	padding-top: 80px;
 }
 
 .wrap:last-child{
-	padding-bottom: 40px;
+	padding-bottom: 80px;
+	@include sp{
+		padding-top: 40px;
+	}
 }
 
 
@@ -539,19 +546,49 @@ body {
 	}
 }
 
+		//ボタン共用設定
+               .btn {
+					   display: block;
+					  width: 170px;
+					  height: 40px;
+					  border-radius: 30px;
+					  line-height: 40px;
+					  text-align: center;
+					  font-weight: 400;
+					  letter-spacing: 0.1em;
+					  padding-left: 10px;
+					  position: relative;
+				     color: white;
+					  @include tab{
+						  width: 150px;
+					   }
+					  &::before{
+						    content: "";
+							position: absolute;
+							display: inline-block;
+							left: 36px;
+							top: 33%;
+							border-top: 6px solid transparent;
+							border-bottom: 6px solid transparent;
+							border-left: 8px solid white;
+					  }
+					}
+
 //見出し設定
 	.ad-contents {
+	
 			h2 {
 				width: 100%;
 				@extend %box-center;
 				.inner-h2 {
 					display: inline-block;
+					width: 90%;
 				&::after {
 					display: block;
 					height: 7px;
 					content: "";
 					width: 100%;
-					margin: -7px auto 0;
+					margin: 5px auto 0;
 				background-color: yellow;
 				   }
 				}
@@ -568,22 +605,21 @@ body {
 					  @include sp {
 						  padding: 0;
 					  }
+				    }
 				  }
+				  
 			  #rolemo-button{
 				  padding-top: 20px;
-				  a {
-					   width: 140px;
-					  display: block;
-					  @include tab{
-						  width: 120px;
-					   }
-					  img{
-						  @extend %img-responsiv;
-					   }
-				     }
-			                }
-								}
+				  .btn {
+					  background-color: #FF8400;
+					 
+					  &:hover{
+						  background-color: #FE9971;
+					  }
+				  }  
 			 }
+		}
+			 
 	//未来トーク説明		  
 				.talk{
 					 @include sp{
@@ -635,6 +671,9 @@ body {
 					font-size: calc(1.625rem + ((1vw - 4.8px) * 0.7843));
 					font-weight: 500;
 					border-bottom: 2px solid #FF662E;
+					@include sp {
+						margin: 0 3% 30px;
+					}
 				}
 
 				dl{ 
@@ -661,9 +700,7 @@ body {
 						}
 						#form-enter{
 							margin: 30px auto 0;
-							img {
-								@extend %img-responsiv;
-							}
+							background-color: red;
 						}
 					}
 				}
@@ -673,16 +710,32 @@ body {
 					
 						#contact-enter{
 							margin: 20px auto 0;
-							img {
-								@extend %img-responsiv;
-							}
+							background-color: orange;
 						}
 					}
 				p{
 					font-weight: 400;
+					padding: 0 4%;
 				}
 			}
 		}
+
+#form-enter,#contact-enter{
+	padding-left: 20px;
+	width: 220px;
+	height: 55px;
+	line-height: 55px;
+	font-size: 16px;
+	&::before{
+	left: 21px;
+	top: 36%;	
+	}
+	@include tab {
+		width: 190px;
+		height: 45px;
+	line-height: 45px;
+	}
+}
 
 .donaition-pattern{
 	font-weight: 400;
@@ -690,13 +743,6 @@ body {
 	padding-right: 1em;
 }
 
-#form-enter,#contact-enter{
-	display: block;
-	width: 200px;
-	@include sp {
-		width: 150px;
-	}
-}
 
 footer{
 	background-color: orange;
