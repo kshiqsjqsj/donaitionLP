@@ -186,6 +186,11 @@ section {
     width: 90%;
   }
 }
+@media (max-width: 480px) {
+  section {
+    padding-top: 40px;
+  }
+}
 
 .ad-description {
   width: 100%;
@@ -233,6 +238,11 @@ section {
 .ad-description .text #readmore {
   width: 250px;
   padding: 35px 0;
+}
+@media (max-width: 480px) {
+  .ad-description .text #readmore {
+    padding: 10px 0;
+  }
 }
 .ad-description .text #readmore a {
   display: block;
@@ -453,13 +463,18 @@ section {
 .wrap {
   padding-top: 80px;
 }
+@media (max-width: 480px) {
+  .wrap {
+    padding-top: 40px;
+  }
+}
 
 .wrap:last-child {
   padding-bottom: 80px;
 }
 @media (max-width: 480px) {
   .wrap:last-child {
-    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -613,6 +628,12 @@ section {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #fff7ca;
+}
+@media (max-width: 480px) {
+  .donaition-method {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 .donaition-method .donaition-text {
   width: 50%;

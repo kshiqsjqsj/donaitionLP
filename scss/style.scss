@@ -212,6 +212,10 @@ body {
 				@include tab {
 					width: 90%;
 				}
+			
+				@include sp{
+					padding-top: 40px;
+				}
 			}
 
 
@@ -256,6 +260,9 @@ body {
 					width: 250px;
 					@extend %box-center;
 					padding: 35px 0;
+					@include sp {
+						padding: 10px 0;
+					}
 					a {
 					display: block;
 					border: red 1px solid;
@@ -488,12 +495,15 @@ body {
 
 .wrap{
 	padding-top: 80px;
+	@include sp{
+		padding-top: 40px;
+	}
 }
 
 .wrap:last-child{
 	padding-bottom: 80px;
 	@include sp{
-		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 }
 
@@ -650,6 +660,10 @@ body {
 			padding-top: 80px;
 			padding-bottom: 80px;
 			background-color: #fff7ca;
+	@include sp {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 			.donaition-text{
 				width: 50%;
 				@extend %box-center;
