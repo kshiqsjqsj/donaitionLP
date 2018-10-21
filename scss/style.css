@@ -547,6 +547,7 @@ section {
 
 .ad-contents h2 {
   width: 100%;
+  font-size: calc(1.25rem + ((1vw - 4.8px) * 0.7843));
 }
 .ad-contents h2 .inner-h2 {
   display: inline-block;
@@ -672,6 +673,9 @@ section {
   margin: 30px auto 0;
   background-color: red;
 }
+.donaition-method .donaition-text dl dd #form-enter:hover {
+  background-color: #FF6366;
+}
 .donaition-method .donaition-text #contact {
   text-align: center;
   padding: 30px 0 20px;
@@ -679,6 +683,9 @@ section {
 .donaition-method .donaition-text #contact #contact-enter {
   margin: 20px auto 0;
   background-color: orange;
+}
+.donaition-method .donaition-text #contact #contact-enter:hover {
+  background-color: #FF935E;
 }
 .donaition-method .donaition-text p {
   font-weight: 400;
