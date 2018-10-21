@@ -579,6 +579,7 @@ body {
 	
 			h2 {
 				width: 100%;
+				font-size: calc(1.25rem + ((1vw - 4.8px) * 0.7843));;
 				@extend %box-center;
 				.inner-h2 {
 					display: inline-block;
@@ -701,6 +702,9 @@ body {
 						#form-enter{
 							margin: 30px auto 0;
 							background-color: red;
+							&:hover {
+								background-color: #FF6366;
+							}
 						}
 					}
 				}
@@ -711,6 +715,9 @@ body {
 						#contact-enter{
 							margin: 20px auto 0;
 							background-color: orange;
+							&:hover {
+								background-color: #FF935E;
+							}
 						}
 					}
 				p{
