@@ -120,6 +120,7 @@ body {
 		@include sp{
 			height: 25px;
 		}
+   }   
 	  .header-inner {
 		width: 80%;
 		margin: 0 auto;
@@ -135,18 +136,16 @@ body {
 			  @include tab {
 				  width: 140px;
 			  }
-			  
 			   @include sp {
 				  width: 80px;
 				   top: -4px;
 			  }
-			  
 			  a img {
 				@extend %img-responsiv;
 			  }
 		  }
 	  }
-	}
+	
 
 //メインイメージ
 .main-image {
@@ -164,6 +163,7 @@ body {
 			}
 		}
 	}
+}
 	
 	.cachcopy {
 			  position: absolute;
@@ -178,12 +178,12 @@ body {
 				@include tab{
 					width: 57%;
 				} 
-			 
-			  img {
+			 img {
 				  width: 100%;
 				  height: auto;
 			  }
 		  }
+
 		  .main-button {
 			position: absolute;
 			  bottom: 3%;
@@ -199,7 +199,7 @@ body {
 				  @extend %img-responsiv;
 				}
 			}
-}
+
 
 //セッションきょうつう
 		section {
@@ -228,6 +228,7 @@ body {
 			@include sp{
 				margin: 0;
 			}
+		}
 			.text {
 				width: 70%;
 				@extend %box-center;
@@ -255,7 +256,9 @@ body {
 						margin-bottom: 15px;
 						font-size: 14px;
 					}
-				}
+				 }
+               }
+
 				#readmore {
 					width: 250px;
 					@extend %box-center;
@@ -281,9 +284,15 @@ body {
 						color: white;
 					}
 				} 
-			}
 			
-	//アスデッサン説明ページカラーボール,写真設定		
+	//アスデッサン説明ページカラーボール,写真設定
+.ball,.photo{
+				width: 100%;
+				position: absolute;
+				height: auto;
+}
+
+
 			.ball {
 				width: 20%;
 				height: auto;
@@ -301,25 +310,17 @@ body {
 				}
 			}
 			
-			& img{
-				width: 100%;
-				position: absolute;
-				height: auto;
-			}
-			
 			//レフト
 			#sample1{
 				top: 13%;
 				left: 1%;
 				width: 11%;
-				
 			}
 			
 			#sample2{
 				top: 52%;
 				left: 6%;
 				width: 14%;
-				
 			}
 			
 			#pink-ball {
@@ -417,46 +418,41 @@ body {
 					width: 10%;
 				}
 			}
-			
-			
-		}
 
-
-
+//ロルモ、未来トークコンテンツ見出し設定
+	.ad-contents {
+			h2 {
+				width: 100%;
+				font-size: calc(1.25rem + ((1vw - 4.8px) * 0.7843));;
+				@extend %box-center;
+				.inner-h2 {
+					display: inline-block;
+					width: 90%;
+				&::after {
+					display: block;
+					height: 7px;
+					content: "";
+					width: 100%;
+					margin: 5px auto 0;
+				background-color: yellow;
+				   }
+				 }
+			   }
+     }
 
 
 //ロルモ、未来トークタイトル
 
 .title-wrapper {
-					/*display: table;*/
-					/*table-layout: fixed;*/
 					display: block;
 					border-bottom: 1px solid #FF9D00;
 					padding-bottom: 10px;
 					margin-bottom: 12px;
-					  .square {
-						display: table-cell;
-						display: none;
-						border-radius: 50%;
-						background-color: #FF7B15;
-						width: 50px;
-						height: 50px;
-						color: white;
-						font-size: 32px;
-						font-weight: 500;  
-						text-align: center;
-						vertical-align: middle;
-						  @include tab {
-							font-size: 28px;
-							  width: 44px;
-							  height: 44px;
-						}
-					  }
+					  
 					  .contents-h3 {
-						/*display: table-cell;*/
 						width: 110px;
 						padding-left: 15px;
-						  padding-top: 3px;
+						padding-top: 3px;
 						  img{
 							  @extend %img-responsiv;
 							  vertical-align: middle;
@@ -476,7 +472,6 @@ body {
 .pc {
 	@include sp{
 			display: none;
-
 	}
 }
 
@@ -584,26 +579,6 @@ body {
 					  }
 					}
 
-//見出し設定
-	.ad-contents {
-	
-			h2 {
-				width: 100%;
-				font-size: calc(1.25rem + ((1vw - 4.8px) * 0.7843));;
-				@extend %box-center;
-				.inner-h2 {
-					display: inline-block;
-					width: 90%;
-				&::after {
-					display: block;
-					height: 7px;
-					content: "";
-					width: 100%;
-					margin: 5px auto 0;
-				background-color: yellow;
-				   }
-				}
-			   }
 //ロルモ説明
 		 .rolemo{
 			  @include sp{
@@ -645,14 +620,10 @@ body {
 						  @include sp {
 							  padding: 0;
 						  }
-					  }
-					 
-					} 	
-				 
-             }
+					    }
+					 } 	
 
 //寄付方法説明
-
 
 .donaition-method{
 			width: 100%;
@@ -660,9 +631,10 @@ body {
 			padding-top: 80px;
 			padding-bottom: 80px;
 			background-color: #fff7ca;
-	@include sp {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		@include sp {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
 	}
 			.donaition-text{
 				width: 50%;
@@ -672,26 +644,27 @@ body {
 				border-radius: 8px;
 				padding: 40px 60px;
 				background-color: #fffce3;
-				@include tab {
-					padding: 20px 7%;
-					width: 80%;
-				}
-				@include sp {
-					padding: 20px 0 ;
-					width: 90%;
-				}
-				h3{
-					margin-bottom: 30px;
-					color: #FF662E;
-					font-size: calc(1.625rem + ((1vw - 4.8px) * 0.7843));
-					font-weight: 500;
-					border-bottom: 2px solid #FF662E;
-					@include sp {
-						margin: 0 3% 30px;
-					}
+						@include tab {
+							padding: 20px 7%;
+							width: 80%;
+						}
+						@include sp {
+							padding: 20px 0 ;
+							width: 90%;
+						}
+					h3{
+						margin-bottom: 30px;
+						color: #FF662E;
+						font-size: calc(1.625rem + ((1vw - 4.8px) * 0.7843));
+						font-weight: 500;
+						border-bottom: 2px solid #FF662E;
+						@include sp {
+							margin: 0 3% 30px;
+						   }
+					   }
 				}
 
-				dl{ 
+				.donaition-text dl{ 
 					width: 70%;
 					@extend %box-center;
 					text-align: left;
@@ -708,38 +681,21 @@ body {
 						&:first-child{
 							margin-left: 1em;
 						}
-						#red{
-							color: red;
-							font-size: 1em;
-							padding-left: 3px;
-						}
-						#form-enter{
-							margin: 30px auto 0;
-							background-color: red;
-							&:hover {
-								background-color: #FF6366;
-							}
-						}
 					}
 				}
-				#contact{
-						text-align: center;
-						padding: 30px 0 20px;
 					
-						#contact-enter{
-							margin: 20px auto 0;
-							background-color: orange;
-							&:hover {
-								background-color: #FF935E;
-							}
-						}
-					}
-				p{
-					font-weight: 400;
-					padding: 0 4%;
-				}
-			}
-		}
+
+#red{
+	color: red;
+	font-size: 1em;
+	padding-left: 3px;
+	}
+
+.donaition-pattern{
+	font-weight: 400;
+	color: #FF662E;
+	padding-right: 1em;
+}
 
 #form-enter,#contact-enter{
 	padding-left: 20px;
@@ -758,10 +714,31 @@ body {
 	}
 }
 
-.donaition-pattern{
-	font-weight: 400;
-	color: #FF662E;
-	padding-right: 1em;
+#form-enter{
+	margin: 30px auto 0;
+	background-color: red;
+	&:hover {
+	background-color: #FF6366;
+			}
+}
+
+#contact{
+	text-align: center;
+	padding: 30px 0 20px;
+}
+
+
+#contact-enter{
+	margin: 20px auto 0;
+	background-color: orange;
+	   &:hover {
+		background-color: #FF935E;
+				}
+}
+
+p{
+   font-weight: 400;
+   padding: 0 4%;
 }
 
 
