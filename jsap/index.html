@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MYアプリ</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="wrapper">
+	<header>
+	  <h1>制作アプリケーション</h1>
+	</header>
+
+	<!--じゃんけんアプリ-->
+	
+		<section>
+			 <h2>じゃんけん、コンピューターと対決</h2>
+		  <ul>
+			<li id="gu_btn">グー</li>
+			<li id="cho_btn">チョキ</li>
+			<li id="par_btn">パー</li>
+		  </ul>
+		  <div id="pc">コンピュータの出した手は？</div>
+		  <div id="num">ここに表示されます</div>
+		</section>
+
+		<!--お絵かきアプリ-->
+	
+	   <section>
+            <h2>ペイントアプリ</h2>
+   
+            <div><button id="clear_btn">クリアー</button>
+				<input type="color" id="colors" value="#000000">
+				<input type="range" id="strokrange" value="1" min="1" max="18" step="1"
+  oninput="document.getElementById('output1').value=this.value+ 'px'">
+				
+				<output id="output1">1px</output>
+			</div>
+            <canvas id="drowarea" width="800" height="500" style="border:1px solid #555;"></canvas>
+        </section>
+
+		<!--保存機能つきメモアプリ-->
+	
+		<section>
+			<h2>保存機能付きメモ</h2>
+		   <select id="memo_serect">
+				<option value="memo1">memo1</option>
+				<option value="memo2">memo2</option>
+				<option value="memo3">memo3</option>
+			</select>
+
+			<button id="memo_send">出力</button>
+			<div>
+				<textarea id="text_write">
+				</textarea>
+			</div>
+
+			<button id="save">save</button>
+			<button id="clear">clear</button>
+		</section>
+</div>
+
+	<script type="text/javascript" src="style.js"></script>
+</body>
+</html>

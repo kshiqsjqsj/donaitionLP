@@ -90,7 +90,7 @@ a img {
 h2 {
 	text-align: center;
 	line-height: 1;
-	font-family: kan415typos-std, sans-serif;
+	font-family: dnp-shuei-gothic-kin-std, sans-serif;
 
 font-weight: 400;
 
@@ -700,6 +700,15 @@ body {
 	padding-right: 1em;
 }
 
+#donation-money{
+	width: 230px;
+	line-height: 20px;
+	display: block;
+	font-size: 14px;
+	margin-top: 30px;
+	@extend %box-center;
+}
+
 #form-enter,#contact-enter{
 	padding-left: 20px;
 	width: 220px;
@@ -720,8 +729,9 @@ body {
 	}
 }
 
+
 #form-enter{
-	margin: 30px auto 0;
+	margin: 30px auto 60px;
 	background-color: red;
 	&:hover {
 	background-color: #FF6366;
