@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+
+#wrapper {
+			width: 80vw;
+			margin: 0 auto;
+		}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+	margin-bottom: 50px;
+}
+
+section {
+	width: 90%;
+	max-width: 800px;
+	margin: 40px auto;
+}
+
+h2{
+	text-align: center;
+}
+
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+#pc,#num{
+	text-align: center;
+}
+
+div {
+		margin-bottom: 5px;
+		}
+		
+		div button {
+			width: 150px;
+			
+		}
+		
+		button,input {
+			vertical-align: middle;
+		}
+
+		
+		#text_write {
+			width: 100%;
+			height: 40vh;
+		}
+		
+		#memo_serect,#memo_send {
+			margin-bottom: 15px;
+			vertical-align: middle;
+		}
+		
+		#save, #clear {
+			width: 200px;
+			height: 50px;
+			border-radius: 4px;
+			background-color: black;
+			font-size: 20px;
+			color: white;
+			border: none;
+			margin-top: 15px;
+			cursor: pointer;
+		}
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
