@@ -14,7 +14,7 @@
     display: block;
   }
 }
-section, .text, #readmore, .ad-contents h2, .donaition-text, .donaition-text dl, #donation-money {
+section, .text, #readmore, .ad-contents h2, .donaition-text, .donaition-text dl, .form-wrap, #donation-money {
   margin: 0 auto;
 }
 
@@ -633,12 +633,17 @@ section {
 }
 
 .donaition-text {
-  width: 50%;
+  width: 60%;
   text-align: center;
   border: solid 1px #fc6;
   border-radius: 8px;
   padding: 40px 60px;
   background-color: #fffce3;
+}
+@media (max-width: 1024px) {
+  .donaition-text {
+    width: 70%;
+  }
 }
 @media (max-width: 768px) {
   .donaition-text {
@@ -666,10 +671,10 @@ section {
 }
 
 .donaition-text dl {
-  width: 70%;
   text-align: left;
   font-size: 14px;
   margin-bottom: 10px;
+  word-break: break-all;
 }
 @media (max-width: 768px) {
   .donaition-text dl {
@@ -677,23 +682,79 @@ section {
   }
 }
 .donaition-text dl dt {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 5px;
 }
-.donaition-text dl dd:first-child {
-  margin-left: 1em;
+.donaition-text dl dd {
+  font-size: 1.5em;
+}
+.donaition-text dl dd li {
+  margin-top: 7px;
+  font-size: 0.8em;
+}
+
+.form-wrap {
+  display: table;
+  table-layout: fixed;
+  width: 90%;
+  padding-left: 16%;
+}
+@media (max-width: 480px) {
+  .form-wrap {
+    padding: 0;
+    display: block;
+  }
+}
+
+.donaition-pattern, .form-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  .donaition-pattern, .form-inner {
+    display: block;
+  }
+}
+
+.donaition-pattern {
+  font-family: dnp-shuei-gothic-kin-std, sans-serif;
+  font-weight: 550;
+  color: #FF662E;
+  width: 10%;
+  line-height: 1.3em;
+}
+@media (max-width: 480px) {
+  .donaition-pattern {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.form-inner {
+  width: 50%;
+}
+@media (max-width: 480px) {
+  .form-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.top-text {
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
 #red {
   color: red;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding-top: 5px;
   padding-left: 3px;
 }
 
-.donaition-pattern {
-  font-weight: 400;
-  color: #FF662E;
-  padding-right: 1em;
+#select-wrap {
+  display: block;
 }
 
 #donation-money {
@@ -702,6 +763,7 @@ section {
   display: block;
   font-size: 14px;
   margin-top: 30px;
+  border: solid 1px gray;
 }
 
 #form-enter, #contact-enter {
